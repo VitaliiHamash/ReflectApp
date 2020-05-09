@@ -1,0 +1,4 @@
+#Sat May 09 13:56:56 PDT 2020
+base.0=/home/vitalii/Legiosoft/Reflect/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
