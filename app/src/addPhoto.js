@@ -6,7 +6,7 @@ export default class AddPhoto extends Component {
   render() {
     return (
       <View>
-            <Text>Add Photo</Text>
+            <Text>Add Photo New</Text>
       </View>
     )
   }
