@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import { StatusBar } from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
 //import AddPhoto from './app/src/addPhoto';
 //import Gallery from './app/src/Gallery';
@@ -15,6 +17,12 @@ import {createMaterialBottomTabNavigator} from '@react-navigation/material-botto
 const MaterialBottomTabs = createMaterialBottomTabNavigator();
 
 export default class App extends Component {
+
+
+    componentDidMount(){
+        SplashScreen.hide();
+    }
+
     render(){
         return(
             <NavigationContainer>
