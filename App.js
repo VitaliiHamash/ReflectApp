@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 
-import AddPhoto from './app/src/addPhoto';
-import Gallery from './app/src/Gallery';
-//import FoodForm from './app/src/foodForm';
-//import FoodList from './app/src/foodList';
+//import AddPhoto from './app/src/addPhoto';
+//import Gallery from './app/src/Gallery';
+import FoodForm from './app/src/foodForm';
+import FoodList from './app/src/foodList';
 
 import {NavigationContainer} from '@react-navigation/native';
 
@@ -20,9 +20,9 @@ export default class App extends Component {
             <NavigationContainer>
                     
                     <MaterialBottomTabs.Navigator>
-                        <MaterialBottomTabs.Screen name="Add Photo" component={AddPhoto}/>
+                        <MaterialBottomTabs.Screen name="Food Form" component={FoodForm}/>
                         
-                        <MaterialBottomTabs.Screen name="Gallery" component={Gallery}/>
+                        <MaterialBottomTabs.Screen name="Food List" component={FoodList}/>
                      </MaterialBottomTabs.Navigator>
                     
             </NavigationContainer>

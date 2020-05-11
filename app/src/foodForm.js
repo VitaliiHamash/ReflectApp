@@ -1,55 +1,61 @@
-import React, { Component } from 'react';
-import {
-    View,
-    TextInput,
-    Text,
-    Button} from 'react-native'
+import React, { Component } from 'react'
+import { View,Image, Button } from 'react-native';
+import ImagePicker from 'react-native-image-picker';
+
 import { connect } from 'react-redux';
 import { addFood } from  './actions/food';
 
-import { styles } from './styles/styles'
- 
-class FoodForm extends Component {
-    state = {
-        food: null
-    }
 
-    render(){
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>Add Image</Text>
-                <TextInput
-                    value={this.state.food}
-                    placeholder='Name'
-                    style={styles.foodInput}
-                    onChangeText={(food) => this.setState({food})}
-                />
-                <Button
-                    title='Submit'
-                    color='black'
-                    onPress={() => this.props.add(this.state.food)}
-                />
-                <Button
-                    title='Go to Gallery'
-                    onPress={() =>
-                        this.props.navigation.navigate('Gallery')}
-                />
-            </View>
-        )
-    }
+class FoodForm extends Component {
+  
+  state = {
+    food: null
+  }
+  
+  handleChooseImage = () => {
+
+    const options = {
+      noData:true,
+    }; 
+    ImagePicker.launchImageLibrary(options, response => {
+      
+      if(response.uri){
+        this.setState({food:response.uri});
+        console.log(this.state)
+        this.props.add(this.state.food)
+      }
+    })
+
+  }
+
+  render() {
+    
+    return (
+      
+      <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+            
+
+            <Button
+                title="Choose Image"
+                onPress={this.handleChooseImage}
+            
+            />
+      </View>
+    )
+  }
 }
 
 const  mapStateToProps = (state) => {
-    console.log(state);
-    return {
-        foods: state.foodReducer.foodList
-    }
+  console.log(state);
+  return {
+      foods: state.foodReducer.foodList
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        add: (food) => dispatch(addFood(food)) 
-    }
+  return {
+      add: (food) => dispatch(addFood(food)) 
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoodForm);
