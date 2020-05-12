@@ -1,55 +1,73 @@
-import React, { Component } from 'react';
-import {
-    View,
-    TextInput,
-    Text,
-    Button} from 'react-native'
+import React, { Component } from 'react'
+import ImagePicker from 'react-native-image-picker';
+
 import { connect } from 'react-redux';
 import { addFood } from  './actions/food';
 
-import { styles } from './styles/styles'
- 
-class FoodForm extends Component {
-    state = {
-        food: null
-    }
+import {Container, Content, H1} from 'native-base';
 
-    render(){
-        return (
-            <View style={styles.container}>
-                <Text style={styles.title}>Add Image</Text>
-                <TextInput
-                    value={this.state.food}
-                    placeholder='Name'
-                    style={styles.foodInput}
-                    onChangeText={(food) => this.setState({food})}
-                />
-                <Button
-                    title='Submit'
-                    color='black'
-                    onPress={() => this.props.add(this.state.food)}
-                />
-                <Button
-                    title='Go to Gallery'
-                    onPress={() =>
-                        this.props.navigation.navigate('Gallery')}
-                />
-            </View>
-        )
-    }
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+
+class FoodForm extends Component {
+
+  state = {
+    food: null
+  }
+  
+  handleChooseImage = () => {
+
+    const options = {
+      noData:true,
+    }; 
+    
+    
+
+    ImagePicker.launchImageLibrary(options, response => {
+      
+      currentDate = new Date().getDate()
+      month = new Date().getMonth() + 1
+      year = new Date().getFullYear()
+      hours = new Date().getHours()
+      minute = new Date().getMinutes()
+      seconds = new Date().getSeconds()
+      getData = currentDate + '/' + month + '/' + year + ' ' + hours + ':' + minute + ':' + seconds; 
+    
+      if(response.uri){
+        this.setState({food:{image:response.uri, date:getData}});
+        console.log(this.state)
+        this.props.add(this.state.food)
+      }
+    })
+
+  }
+
+  render() {
+    
+    return (
+      
+      <Container style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+            
+          <Content>
+                <Icon style={[{ color: 'black', marginTop:130}]} size={250} name={'image-plus'} onPress={this.handleChooseImage} />
+                <H1 onPress={this.handleChooseImage} >Upload photo...</H1>
+          </Content>
+            
+      </Container>
+    )
+  }
 }
 
 const  mapStateToProps = (state) => {
-    console.log(state);
-    return {
-        foods: state.foodReducer.foodList
-    }
+  console.log(state);
+  return {
+      foods: state.foodReducer.foodList
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        add: (food) => dispatch(addFood(food)) 
-    }
+  return {
+      add: (food) => dispatch(addFood(food)) 
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(FoodForm);

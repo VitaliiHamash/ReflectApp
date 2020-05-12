@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vitalii/Legiosoft/Reflect/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
+            "outputFile": "/home/vitalii/Legiosoft/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
                     "source": "/home/vitalii/.gradle/caches/transforms-2/files-2.1/581076caa4eafaba8031f197939dcba6/res/values-v26/values-v26.xml",
