@@ -19,10 +19,21 @@ class FoodForm extends Component {
     const options = {
       noData:true,
     }; 
+    
+    
+
     ImagePicker.launchImageLibrary(options, response => {
       
+      currentDate = new Date().getDate()
+      month = new Date().getMonth() + 1
+      year = new Date().getFullYear()
+      hours = new Date().getHours()
+      minute = new Date().getMinutes()
+      seconds = new Date().getSeconds()
+      getData = currentDate + '/' + month + '/' + year + ' ' + hours + ':' + minute + ':' + seconds; 
+    
       if(response.uri){
-        this.setState({food:response.uri});
+        this.setState({food:{image:response.uri, date:getData}});
         console.log(this.state)
         this.props.add(this.state.food)
       }

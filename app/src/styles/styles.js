@@ -17,18 +17,23 @@ export const styles = StyleSheet.create({
     listText:{
         fontSize:30
     },
+    itemRow:{
+        flex: 1,
+        flexDirection:"row"
+    },  
     container: {
         flex: 1,
+        
         margin: 16,
         alignItems: 'center',
         justifyContent: 'center'
     },
-    foodInput: {
-        fontSize: 32,
-        marginBottom: 32,
-        borderWidth: 1,
-        padding: 8,
-        width: '80%',
-        borderRadius: 10,
-    }
+    photoList: {
+        flex: 1,
+        flexDirection:'row',
+        marginBottom: 7,
+        justifyContent:'space-between',
+        alignItems:'center'
+    },
+    
 });

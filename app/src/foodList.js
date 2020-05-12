@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Image, View,FlatList } from 'react-native';
+import { Image,FlatList, View } from 'react-native';
 
-
+import {Container, Content, Text, Right} from 'native-base';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { connect } from 'react-redux';
 import { deleteFood } from './actions/food';
 
@@ -11,12 +12,20 @@ import { styles } from './styles/styles'
 class FoodList extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <Container style={styles.container}>
                  <FlatList 
         data={this.props.foods}
-        renderItem={(data) => <Image style={{width:400, height:400}} source={{uri:data.item.name}}/>}
+        renderItem={(data) => <Content><Image style={{width:400, height:400}} source={{uri:data.item.name.image}}/>
+          <View style={styles.photoList}>
+              <Icon style={[{ color: 'black', marginBottom:15,marginLeft:10}]} size={32} name={'delete'} onPress={() => this.props.delete(data.item.key)}/>
+              <Text style={{textAlign: 'right', marginRight:10,marginBottom:15,marginLeft:10}}>{data.item.name.date}</Text>
+          </View>
+        </Content>
+        
+          
+        }
         />
-        </View>
+        </Container>
         
  
     )
