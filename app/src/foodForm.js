@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { View,Image, Button } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
 
 import { connect } from 'react-redux';
 import { addFood } from  './actions/food';
 
+import {Container, Content, H1} from 'native-base';
+
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 class FoodForm extends Component {
-  
+
   state = {
     food: null
   }
@@ -32,15 +34,14 @@ class FoodForm extends Component {
     
     return (
       
-      <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+      <Container style={{flex:1, alignItems:"center", justifyContent:"center"}}>
             
-
-            <Button
-                title="Choose Image"
-                onPress={this.handleChooseImage}
+          <Content>
+                <Icon style={[{ color: 'black', marginTop:130}]} size={250} name={'image-plus'} onPress={this.handleChooseImage} />
+                <H1 onPress={this.handleChooseImage} >Upload photo...</H1>
+          </Content>
             
-            />
-      </View>
+      </Container>
     )
   }
 }

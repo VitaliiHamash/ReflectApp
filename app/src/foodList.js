@@ -14,7 +14,7 @@ class FoodList extends Component {
       <View style={styles.container}>
                  <FlatList 
         data={this.props.foods}
-        renderItem={(data) => <Image style={{width:300, height:300}} source={{uri:data.item.name}}/>}
+        renderItem={(data) => <Image style={{width:400, height:400}} source={{uri:data.item.name}}/>}
         />
         </View>
         
