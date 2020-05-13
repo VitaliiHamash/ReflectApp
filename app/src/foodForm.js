@@ -17,29 +17,36 @@ class FoodForm extends Component {
   handleChooseImage = () => {
 
     const options = {
+      title:'Choose from...',
+      takePhotoButtonTitle:'Camera',
+      chooseFromLibraryButtonTitle: 'Library',
+
       noData:true,
     }; 
     
-    
-
-    ImagePicker.launchImageLibrary(options, response => {
-      
+    getTime = () => {
       currentDate = new Date().getDate()
       month = new Date().getMonth() + 1
       year = new Date().getFullYear()
       hours = new Date().getHours()
       minute = new Date().getMinutes()
       seconds = new Date().getSeconds()
-      getData = currentDate + '/' + month + '/' + year + ' ' + hours + ':' + minute + ':' + seconds; 
+      return currentDate + '/' + month + '/' + year + ' ' + hours + ':' + minute + ':' + seconds; 
+    } 
     
+    ImagePicker.showImagePicker(options, response => {
       if(response.uri){
-        this.setState({food:{image:response.uri, date:getData}});
+        this.setState({food:{image:response.uri, date:getTime()}});
         console.log(this.state)
         this.props.add(this.state.food)
       }
     })
+    
 
-  }
+
+    }
+
+
 
   render() {
     

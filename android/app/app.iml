@@ -140,6 +140,7 @@
     <orderEntry type="module" module-name="react-native-reanimated" />
     <orderEntry type="module" module-name="react-native-safe-area-context" />
     <orderEntry type="module" module-name="react-native-screens" />
+    <orderEntry type="module" module-name="react-native-splash-screen" />
     <orderEntry type="module" module-name="react-native-vector-icons" />
   </component>
 </module>

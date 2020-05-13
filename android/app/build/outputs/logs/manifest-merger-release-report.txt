@@ -1,15 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
 MERGED from [:react-native-community_masked-view] /home/vitalii/Legiosoft/node_modules/@react-native-community/masked-view/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-gesture-handler] /home/vitalii/Legiosoft/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-image-picker] /home/vitalii/Legiosoft/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-reanimated] /home/vitalii/Legiosoft/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /home/vitalii/Legiosoft/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /home/vitalii/Legiosoft/node_modules/react-native-screens/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-splash-screen] /home/vitalii/Legiosoft/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-14:12
 MERGED from [:react-native-vector-icons] /home/vitalii/Legiosoft/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/release/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.61.5] /home/vitalii/.gradle/caches/transforms-2/files-2.1/67f837477875b988e245b7a58c59a18c/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.1.0] /home/vitalii/.gradle/caches/transforms-2/files-2.1/33a89a715da7d5ef033d03eecf35e39d/AndroidManifest.xml:17:1-24:12
@@ -50,20 +51,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/vitalii/.gradle/
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/vitalii/.gradle/caches/transforms-2/files-2.1/86f7f34fac7288735224853b14c9537b/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/vitalii/.gradle/caches/transforms-2/files-2.1/63e2b8b0511fb18d4c31cf5bdc83f33a/AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/vitalii/.gradle/caches/transforms-2/files-2.1/f8e1040d748814981deb88ed60ffcc55/AndroidManifest.xml:2:1-9:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
-INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
+INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
 	package
 		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:2:3-28
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-28:12
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:1-37:12
 		INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -80,9 +81,11 @@ ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:6:5-
 	android:name
 		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:6:22-78
 application
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:8:5-26:19
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:8:5-35:19
 MERGED from [:react-native-image-picker] /home/vitalii/Legiosoft/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-image-picker] /home/vitalii/Legiosoft/node_modules/react-native-image-picker/android/build/intermediates/library_manifest/release/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-splash-screen] /home/vitalii/Legiosoft/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/release/AndroidManifest.xml:11:5-12:19
+MERGED from [:react-native-splash-screen] /home/vitalii/Legiosoft/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/release/AndroidManifest.xml:11:5-12:19
 MERGED from [com.facebook.react:react-native:0.61.5] /home/vitalii/.gradle/caches/transforms-2/files-2.1/67f837477875b988e245b7a58c59a18c/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.react:react-native:0.61.5] /home/vitalii/.gradle/caches/transforms-2/files-2.1/67f837477875b988e245b7a58c59a18c/AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.1.0] /home/vitalii/.gradle/caches/transforms-2/files-2.1/33a89a715da7d5ef033d03eecf35e39d/AndroidManifest.xml:22:5-20
@@ -107,30 +110,40 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/vital
 		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:14:7-38
 	android:name
 		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:9:7-38
-activity#com.navigation5.MainActivity
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:15:7-24:18
+activity#com.navigation5.SplashActivity
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:15:9-23:20
 	android:label
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:17:9-41
-	android:windowSoftInputMode
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:19:9-51
-	android:configChanges
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:18:9-79
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:18:13-45
+	android:theme
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:16:9-37
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:16:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:20:9-23:25
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:19:13-22:29
 action#android.intent.action.MAIN
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:21:13-65
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:21:21-62
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:22:13-73
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:22:23-70
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:21:27-74
+activity#com.navigation5.MainActivity
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:25:5-33:18
+	android:label
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:27:9-41
+	android:windowSoftInputMode
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:29:9-51
+	android:exported
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:30:9-32
+	android:configChanges
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:28:9-79
+	android:name
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:26:9-37
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:25:7-84
+ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:34:7-84
 	android:name
-		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:25:17-81
+		ADDED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml:34:17-81
 uses-sdk
 INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/vitalii/Legiosoft/android/app/src/main/AndroidManifest.xml
@@ -147,6 +160,8 @@ MERGED from [:react-native-safe-area-context] /home/vitalii/Legiosoft/node_modul
 MERGED from [:react-native-safe-area-context] /home/vitalii/Legiosoft/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/release/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /home/vitalii/Legiosoft/node_modules/react-native-screens/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /home/vitalii/Legiosoft/node_modules/react-native-screens/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] /home/vitalii/Legiosoft/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-splash-screen] /home/vitalii/Legiosoft/node_modules/react-native-splash-screen/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/vitalii/Legiosoft/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] /home/vitalii/Legiosoft/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.61.5] /home/vitalii/.gradle/caches/transforms-2/files-2.1/67f837477875b988e245b7a58c59a18c/AndroidManifest.xml:7:5-9:41
