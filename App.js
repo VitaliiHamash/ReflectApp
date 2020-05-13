@@ -1,9 +1,7 @@
 import React,{Component} from 'react';
-import { StatusBar } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 
-//import AddPhoto from './app/src/addPhoto';
-//import Gallery from './app/src/Gallery';
+
 import FoodForm from './app/src/foodForm';
 import FoodList from './app/src/foodList';
 
@@ -41,7 +39,7 @@ export default class App extends Component {
                                             <Icon style={[{ color: 'white' }]} size={23} name={'image-plus'} />
                                         ),}}
                                         />
-                                    
+                                        
                                         <MaterialBottomTabs.Screen
                                         name="Food List"
                                         component={FoodList}

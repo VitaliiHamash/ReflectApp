@@ -17,7 +17,9 @@ class FoodList extends Component {
         data={this.props.foods}
         renderItem={(data) => <Content><Image style={{width:400, height:400}} source={{uri:data.item.name.image}}/>
           <View style={styles.photoList}>
-              <Icon style={[{ color: 'black', marginBottom:15,marginLeft:10}]} size={32} name={'delete'} onPress={() => this.props.delete(data.item.key)}/>
+              <Icon style={[{ color: 'black', marginBottom:15,marginLeft:10}]}
+                    size={32} name={'delete'}
+                    onPress={() => this.props.delete(data.item.key)}/>
               <Text style={{textAlign: 'right', marginRight:10,marginBottom:15,marginLeft:10}}>{data.item.name.date}</Text>
           </View>
         </Content>
