@@ -1,2 +1,2 @@
-export const ADD_FOOD = 'ADD_FOOD';
-export const DELETE_FOOD = 'DELETE_FOOD';
+export const ADD_IMAGE = 'ADD_IMAGE';
+export const DELETE_IMAGE = 'DELETE_IMAGE';

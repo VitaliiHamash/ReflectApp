@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ImagePicker from 'react-native-image-picker';
 
 import { connect } from 'react-redux';
-import { addFood } from  './actions/food';
+import { addImage } from  './actions/image';
 
 import {Container, Content, H1} from 'native-base';
 
@@ -10,8 +10,11 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 class FoodForm extends Component {
 
+
+
+
   state = {
-    food: null
+    image: null
   }
   
   handleChooseImage = () => {
@@ -36,9 +39,10 @@ class FoodForm extends Component {
     
     ImagePicker.showImagePicker(options, response => {
       if(response.uri){
-        this.setState({food:{image:response.uri, date:getTime()}});
-        console.log(this.state)
-        this.props.add(this.state.food)
+        this.setState({image:{uri:response.uri, date:getTime()}});
+        
+        this.props.add(this.state.image)
+        
       }
     })
     
@@ -64,16 +68,23 @@ class FoodForm extends Component {
   }
 }
 
+
+
+
+
+
+
 const  mapStateToProps = (state) => {
   console.log(state);
+  
   return {
-      foods: state.foodReducer.foodList
+      images: state.imageReducer.imageList
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-      add: (food) => dispatch(addFood(food)) 
+      add: (image) => dispatch(addImage(image))
   }
 }
 

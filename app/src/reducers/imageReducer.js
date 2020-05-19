@@ -1,23 +1,23 @@
-import {ADD_FOOD, DELETE_FOOD} from '../actions/types';
+import {ADD_IMAGE, DELETE_IMAGE} from '../actions/types';
 
 const initialState = {
-    foodList:[]
+    imageList:[]
 }
 
-const foodReducer = (state = initialState, action) => {
+const imageReducer = (state = initialState, action) => {
     switch(action.type){
-        case ADD_FOOD:
+        case ADD_IMAGE:
         return {
             ...state,
-        foodList: state.foodList.concat({
+        imageList: state.imageList.concat({
             key: Math.random(),
             name: action.data
            })
         };
-        case DELETE_FOOD:
+        case DELETE_IMAGE:
             return {
                 ...state,
-                foodList: state.foodList.filter((item) =>
+                imageList: state.imageList.filter((item) =>
                 item.key !== action.key)
             };
         default:
@@ -25,4 +25,4 @@ const foodReducer = (state = initialState, action) => {
     }
 }
 
-export default foodReducer;
+export default imageReducer;

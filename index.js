@@ -8,6 +8,7 @@ import configureStore from './app/src/store';
 
 const store = configureStore();
 
+
 const ReduxTutorial = () =>
 <Provider store={store}>
     <App />

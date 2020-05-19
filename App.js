@@ -48,6 +48,7 @@ export default class App extends Component {
                                             <Icon style={[{ color: 'white' }]} size={26} name={'image-search-outline'} />
                                         ),}}
                                         />
+                                        
                      </MaterialBottomTabs.Navigator>
                     
             </NavigationContainer>
