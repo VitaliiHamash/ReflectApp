@@ -4,15 +4,45 @@ import ImagePicker from 'react-native-image-picker';
 import { connect } from 'react-redux';
 import { addFood } from  './actions/food';
 
-import {Container, Content, H1} from 'native-base';
-
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { View } from 'react-native';
+import { Button } from 'react-native-elements';
+import AsyncStorage from '@react-native-community/async-storage';
+import { addAllFoods } from './actions/food'  
+export const FOOD_STORE_KEY = 'foods';
 
 class FoodForm extends Component {
 
+
   state = {
-    food: null
+    food: null,
+    foodStore:null
+    
   }
+
+
+componentDidMount(){
+  this.loadStorageData()
+}
+ 
+
+loadStorageData = async () =>{
+try{
+const foods = await AsyncStorage.getItem(FOOD_STORE_KEY)
+
+if(foods !== null) {
+  
+  this.setState({foodStore:JSON.parse(foods)})
+  console.log(this.state.foodStore)
+  this.props.add(this.state.foodStore)
+  
+}
+} catch(e) {
+console,log(e)
+}
+}
+
+
   
   handleChooseImage = () => {
 
@@ -22,7 +52,9 @@ class FoodForm extends Component {
       chooseFromLibraryButtonTitle: 'Library',
 
       noData:true,
-    }; 
+    };
+
+
     
     getTime = () => {
       currentDate = new Date().getDate()
@@ -33,12 +65,36 @@ class FoodForm extends Component {
       seconds = new Date().getSeconds()
       return currentDate + '/' + month + '/' + year + ' ' + hours + ':' + minute + ':' + seconds; 
     } 
+
+
+    storeFoodLocal = async () => {
+
+      try{
+
+        const storeFood = await AsyncStorage.getItem(FOOD_STORE_KEY)
+       
+         let newFoods = JSON.parse(storeFood) || []
+         
+         newFoods.push(this.state.food);
+         console.log(newFoods)
+         await AsyncStorage.setItem(FOOD_STORE_KEY, JSON.stringify(newFoods))
+        
+      }catch(e){
+        console.log(e);
+      }
+  
+        
+ 
+    }
     
     ImagePicker.showImagePicker(options, response => {
       if(response.uri){
-        this.setState({food:{image:response.uri, date:getTime()}});
+        
+        this.setState({food:{image:response.uri, date:getTime(), key: Math.random()}});
+        storeFoodLocal()
         console.log(this.state)
         this.props.add(this.state.food)
+
       }
     })
     
@@ -52,14 +108,20 @@ class FoodForm extends Component {
     
     return (
       
-      <Container style={{flex:1, alignItems:"center", justifyContent:"center"}}>
+      <View style={{flex:1, alignItems:"center", justifyContent:"center"}}>
             
-          <Content>
+          
                 <Icon style={[{ color: 'black', marginTop:130}]} size={250} name={'image-plus'} onPress={this.handleChooseImage} />
-                <H1 onPress={this.handleChooseImage} >Upload photo...</H1>
-          </Content>
+                
+                <Button
+                   onPress={this.handleChooseImage}
+                   title='Upload photo...'
+                   titleStyle={{fontSize:32}}
+                   type='clear'
+                />
+          
             
-      </Container>
+      </View>
     )
   }
 }
@@ -71,9 +133,12 @@ const  mapStateToProps = (state) => {
   }
 }
 
+
+
 const mapDispatchToProps = (dispatch) => {
   return {
-      add: (food) => dispatch(addFood(food)) 
+      add: (food) => dispatch(addFood(food)),
+      all:(foodStore) => dispatch(addAllFoods(foodStore))
   }
 }
 
