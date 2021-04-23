@@ -3,10 +3,20 @@ import { AppRegistry } from 'react-native';
 import App from './App';
 import { name as appName } from './app.json';
 import { Provider } from 'react-redux';
+import {sagaWatcher} from './app/src/sagas';
+import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
+import imageReducer from './app/src/reducers/imageReducer';
+import createSagaMiddleware from 'redux-saga';
 
-import configureStore from './app/src/store';
+const saga = createSagaMiddleware()
 
-const store = configureStore();
+const rootReducer = combineReducers({
+    imageReducer: imageReducer
+})
+
+const store = createStore(rootReducer, compose(applyMiddleware(saga)));
+
+saga.run(sagaWatcher)
 
 const ReduxTutorial = () =>
 <Provider store={store}>

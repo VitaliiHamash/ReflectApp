@@ -2,8 +2,8 @@ import React,{Component} from 'react';
 import SplashScreen from 'react-native-splash-screen';
 
 
-import FoodForm from './app/src/foodForm';
-import FoodList from './app/src/foodList';
+import ImageForm from './app/src/imageForm';
+import ImageList from './app/src/imageList';
 
 
 import {NavigationContainer} from '@react-navigation/native';
@@ -32,8 +32,8 @@ export default class App extends Component {
                             inactiveColor="#3e2465"
                             barStyle={{ backgroundColor: '#7e00ff' }}>
                                         <MaterialBottomTabs.Screen
-                                        name="Food Form"
-                                        component={FoodForm}
+                                        name="Image Form"
+                                        component={ImageForm}
                                         options={{tabBarLabel: 'Add Photo',
                                         tabBarIcon: () => (
                                             <Icon style={[{ color: 'white' }]} size={23} name={'image-plus'} />
@@ -41,8 +41,8 @@ export default class App extends Component {
                                         />
                                         
                                         <MaterialBottomTabs.Screen
-                                        name="Food List"
-                                        component={FoodList}
+                                        name="Image List"
+                                        component={ImageList}
                                         options={{tabBarLabel: 'Gallery',
                                         tabBarIcon: () => (
                                             <Icon style={[{ color: 'white' }]} size={26} name={'image-search-outline'} />

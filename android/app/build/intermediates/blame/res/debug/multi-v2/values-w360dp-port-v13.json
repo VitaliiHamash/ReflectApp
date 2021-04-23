@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/vitalii/Legiosoft/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "outputFile": "/home/vitalii/Apps/RecflectApp/ReflectApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "/home/vitalii/.gradle/caches/transforms-2/files-2.1/33a89a715da7d5ef033d03eecf35e39d/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
