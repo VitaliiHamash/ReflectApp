@@ -1,5 +1,6 @@
 import {takeEvery, put, call} from 'redux-saga/effects'
 import {FETCH_POSTS, REQUEST_POSTS} from './actions/types'
+import { addImage } from './actions/image';
 
 let axios = require("axios");
 let MockAdapter = require("axios-mock-adapter");
@@ -16,10 +17,12 @@ export function* sagaWatcher() {
   yield takeEvery(REQUEST_POSTS, sagaWorker)
 }
 
-function* sagaWorker() {
+function* sagaWorker(action) {
   try {
+    console.log(action.data)
+    yield put(addImage(action.data))
     const payload = yield call(fetchPosts)
-    console.log(payload)
+    //console.log(payload)
     yield put({ type: FETCH_POSTS, payload })
   } catch (e) {
     console.log('receiving data failed')

@@ -16,8 +16,9 @@ export  const  deleteImage= (key) => (
 );
 
 
-export function fetchPosts() {
+export function fetchPosts(image) {
     return {
-      type: REQUEST_POSTS
+      type: REQUEST_POSTS,
+      data:image
     }
 }

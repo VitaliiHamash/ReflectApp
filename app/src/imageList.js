@@ -4,14 +4,14 @@ import { Image,FlatList, View } from 'react-native';
 import {Container, Content, Text, Right} from 'native-base';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { connect } from 'react-redux';
-import { deleteImage, fetchPosts } from './actions/image';
+import { deleteImage } from './actions/image';
 
 import { styles } from './styles/styles' 
 
 
 class ImageList extends Component {
   render() {
-    console.log(this.props.fetch())
+    
 
     return (
       <Container style={styles.container}>
@@ -46,7 +46,7 @@ const mapStateToProps = (state)=> {
 const mapDispatchToProps = (dispatch) => {
   return {
       delete: (key) => dispatch(deleteImage(key)),
-      fetch:(()=> dispatch(fetchPosts()))
+      
   }
 }
 

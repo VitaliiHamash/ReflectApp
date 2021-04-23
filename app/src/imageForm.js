@@ -37,14 +37,14 @@ class ImageForm extends Component {
     ImagePicker.showImagePicker(options, response => {
       if(response.uri){
         this.setState({image:{image:response.uri, date:getTime()}});
-        console.log(this.state)
-        this.props.add(this.state.image)
+        console.log(this.state.image)
+        this.props.fetch(this.state.image)
       }
     })
   }
 
   render() {
-    console.log(this.props.fetch())
+    //console.log(this.props.fetch())
     return (
               <Container style={{flex:1, alignItems:"center", justifyContent:"center"}}>
                     
@@ -61,7 +61,7 @@ class ImageForm extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
       add: (image) => dispatch(addImage(image)),
-      fetch:(()=> dispatch(fetchPosts()))
+      fetch:((data)=> dispatch(fetchPosts(data)))
   }
 }
 
